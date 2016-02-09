@@ -1,0 +1,33 @@
+<h2>Show user</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </li>
+
+  <li>
+    <strong>Uid:</strong>
+    <%= @user.uid %>
+  </li>
+
+  <li>
+    <strong>Oauth token:</strong>
+    <%= @user.oauth_token %>
+  </li>
+
+  <li>
+    <strong>Oauth expires at:</strong>
+    <%= @user.oauth_expires_at %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: user_path(@conn, :edit, @user) %>
+<%= link "Back", to: user_path(@conn, :index) %>

@@ -1,0 +1,38 @@
+<div class="candidates" class="row">
+  <%= for candidate <- @candidates do %>
+    <div class="col-md-4 hidden-lg">
+      <div id="<%= candidate.id %>" class="candidate">
+        <div class="experience">
+          <%= experience_label(candidate, "management", "primary") %>
+          <%= experience_label(candidate, "startups", "success") %>
+          <%= experience_label(candidate, "english", "danger") %>
+          <%= experience_label(candidate, "hardware", "warning") %>
+          <%= experience_label(candidate, "mobile", "default") %>
+          <%= experience_label(candidate, "web", "info") %>
+        </div>
+
+        <div class="row candidate-hero">
+          <div class="col-md-4">
+            <img class="gravatar" src="http://www.gravatar.com/avatar/<%= gravatar(candidate) %>?s=100"/>
+          </div>
+
+          <div class="col-md-8">
+            <h4><%= candidate |> full_name %></h4>
+            <p>
+              <strong><%= candidate.work["current_role"] %></strong> <br/>
+              <%= candidate.work["current_company"] %> (<em><span class="years-at-current-company"><%= years_at_current_company(candidate)%></span> years</em>)
+              <br/>
+              <%= link_icon_if_exists("fa-linkedin-square", candidate.profiles["linkedin"]) %>
+              <%= link_icon_if_exists("fa-github", candidate.profiles["github"]) %>
+              <%= link_icon_if_exists("fa-twitter", candidate.profiles["twitter"]) %>
+            </p>
+          </div>
+        </div><!-- candidate-hero -->
+        <div class="tech">
+          <%= tech_stack(candidate) %>
+        </div>
+
+      </div> <!-- candidate -->
+    </div>
+  <% end %>
+</div>

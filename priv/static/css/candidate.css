@@ -1,0 +1,56 @@
+.container[role=main] {
+  background-color: #f0f0f0
+}
+
+.experience {
+  margin: 5px 10px;
+}
+
+.tech {
+  margin-left: 5px;
+}
+
+.candidate {
+  display: none;
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  min-height: 220px;
+}
+
+.candidate  h3 {
+  margin-top: 0px
+}
+
+.details p {
+  line-height: 1em;
+  font-size: 0.85em;
+}
+
+.candidate-hero {
+  margin-bottom: 10px;
+}
+
+.candidate-hero img {
+  margin-left: 10px;
+}
+
+.candidate-hero h4 {
+  margin-bottom: 0px;
+}
+.candidate-hero p {
+  font-size: 13px;
+}
+
+.candidate-hero p strong {
+  font-size: 1.125em;
+}
+
+/* icons */
+.fa {
+  font-size: 20px !important;
+  color: black;
+}
+.fa:hover {
+  color: #4485bf;
+}
